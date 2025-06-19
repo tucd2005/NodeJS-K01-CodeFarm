@@ -1,11 +1,12 @@
 import { Router } from "express";
-import { createCategory, deleteCategory, getListCategory, getDetailCategory, updateCategory, softDeleteCategory } from "./category.controller.js";
 import validBodyRequest from './../../common/middlewares/validBodyRequest.js';
 import categorySchema from "./category.schema.js";
+import { getListSubCategory } from "../subcategory/subcategory.controller.js";
+import { createCategory, deleteCategory, getDetailCategory, softDeleteCategory, updateCategory } from './category.controller.js';
 
 const categoryRoutes = Router()
 
-categoryRoutes.get("/",getListCategory)
+categoryRoutes.get("/",getListSubCategory)
 categoryRoutes.get("/:id",getDetailCategory)
 categoryRoutes.post("/",createCategory)
 categoryRoutes.patch("/:id",updateCategory)
