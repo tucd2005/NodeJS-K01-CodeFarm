@@ -28,6 +28,13 @@
     "/categories/": {
       "get": {
         "description": "",
+        "parameters": [
+          {
+            "name": "categoryParentId",
+            "in": "query",
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -36,23 +43,9 @@
       },
       "post": {
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "title": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       }
@@ -69,8 +62,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
@@ -85,13 +78,11 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
-      }
-    },
-    "/categories/delete/{id}": {
+      },
       "delete": {
         "description": "",
         "parameters": [
@@ -103,8 +94,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       }
@@ -121,26 +112,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/categories/restore/{id}": {
-      "patch": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       }
@@ -222,7 +195,7 @@
       }
     },
     "/sub-categories/delete/{id}": {
-      "delete": {
+      "get": {
         "description": "",
         "parameters": [
           {
@@ -240,7 +213,7 @@
       }
     },
     "/sub-categories/soft-delete/{id}": {
-      "delete": {
+      "get": {
         "description": "",
         "parameters": [
           {
@@ -258,7 +231,7 @@
       }
     },
     "/sub-categories/restore/{id}": {
-      "patch": {
+      "get": {
         "description": "",
         "parameters": [
           {
@@ -274,34 +247,34 @@
           }
         }
       }
-      },
-      "/products/": {
-        "get": {
-          "description": "",
-          "responses": {
-            "200": {
-              "description": "OK"
-            }
+    },
+    "/products/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
-      },
-      "/products/{id}": {
-        "get": {
-          "description": "",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            }
+      }
+    },
+    "/products/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
+      }
     }
   }
 }

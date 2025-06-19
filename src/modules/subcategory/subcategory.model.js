@@ -1,5 +1,4 @@
-import mongoose, { version } from "mongoose";
-import { Schema } from "zod";
+import mongoose, { Schema, version } from "mongoose";
 
 
 const subCategorySchema = new Schema(
