@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { createSubCategory, deleteSubCategory, getDetailSubCategory, getListSubCategory, restoreSubCategory, softDeleteSubCategory, updateSubCategory } from "./subcategory.controller";
-import validBodyRequest from './../../common/middlewares/validBodyRequest';
-import categorySchema from './../category/category.schema';
+import { createSubCategory, deleteSubCategory, getDetailSubCategory, getListSubCategory, restoreSubCategory, softDeleteSubCategory, updateSubCategory } from "./subcategory.controller.js";
+import validBodyRequest from './../../common/middlewares/validBodyRequest.js';
+import categorySchema from './../category/category.schema.js';
 
 
 const subCategoryRoutes = Router();
