@@ -28,16 +28,9 @@
     "/categories/": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "categoryParentId",
-            "in": "query",
-            "type": "string"
-          }
-        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       },
